@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P228FirstAPI</name>
+    </assembly>
+    <members>
+        <member name="T:P228FirstAPI.Controllers.V1.CategoriesController">
+            <summary>
+            Categories Services
+            </summary>
+        </member>
+        <member name="M:P228FirstAPI.Controllers.V1.CategoriesController.Get">
+            <summary>
+            Category List Service
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:P228FirstAPI.Controllers.V1.CategoriesController.GetById(System.Nullable{System.Int32})">
+            <summary>
+            Get Category By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <response code="400">Id Null Oldugu Ucun</response>
+            <response code="404">Gonderilen Id-li Object Tapilmadigina Gore</response> 
+            <response code="200">Her Sey Normaldi</response> 
+        </member>
+        <member name="M:P228FirstAPI.Controllers.V1.CategoriesController.Post(P228FirstAPI.DTOs.CategoryDTOs.CategoryForCreateDto)">
+            <summary>
+            Creates an Employee.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/v1/categories
+                {           
+                    "name":"Test"
+                }
+            </remarks>
+            <param name="categoryForCreateDto"></param>
+            <returns>A newly created employee</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="409">Same Name Alreade Exists</response>          
+        </member>
+        <member name="P:P228FirstAPI.DTOs.CategoryDTOs.CategoryForCreateDto.Name">
+            <summary>
+            Categoriyan Adi
+            </summary>
+        </member>
+    </members>
+</doc>
